@@ -3,18 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet foormulaire entretiens</title>
+    <title>Projet formulaire entretiens</title>
 </head>
 <body>
+
+    <main>
+
+        <h1>Bienvenue</h1>
     
     <form action="#">
 
-        <input type="text" name="name" placeholder="Nom">
+        <FIeldset>
+            <legend>Formulaire d'entretiens</legend>
+        
+        <input type="text" name="name" placeholder="Nom" required>
+        
+        <br>
+        
+        <input type="text" name="username" placeholder="Prenom" required>
 
-        <input type="text" name="username" placeholder="Prenom">
+        <br>
 
-        <input type="email" name="email" placeholder="Email">
-    </form>
+        <label for="age">Votre age</label>
+            <input type="number" name="age" id="age" min="18" max="99">
+
+            <br>
+
+        <input type="email" name="email" placeholder="Email" required>
+
+        <br>
+
+        <input type="text" name="adress" placeholder="Adresse postal:">
+
+        <br>
+
+        <input type="text" name="codepostal" placeholder="Code postal:" minlength="0" maxlength="5" title="5 chiffres max" required>
+
+        <br>
+
+        <input type="text" name="country" placeholder="Ville">
+
+        <br>
+
+        <select name="job" id="job">
+            <option value="Développeur Full-Stack">Développeur Full-Stack</option>
+            <option value="Web-Master">Web-Master</option>
+            <option value="Web-Designer">Web-Designer</option>
+            <option value="Web-Marketing">Web-Marketing</option>
+            <option value="Ingénieur" selected>Ingénieur</option>
+            <option value="Développeur PHP">Développeur PHP</option>
+        </select>
+
+        <br>
+        
+        <label for="nationality">Nationalité</label>
+        <br>
+        <select name="nationality" id="nationality">
+            <option value="Français">Français</option>
+            <option value="Espagnol" selected>Espagnol</option>
+            <option value="Italien">italien</option>
+            <option value="Belge">Belge</option>
+            <option value="Anglais">Anglais</option>
+            <option value="Russe">Russe</option>
+        </select>
+
+        <br>
+
+        <label for="date">Date de Naissance</label>
+        <br>
+            <input type="date" id="date">
+
+        <br>
+        
+        <label for="naissance_pays">Pays de Naissance</label>
+
+        <br>
+            <select name="naissance_pays" id="naissance_pays">
+                <option value="France">France</option>
+                <option value="Espagne">Espagne</option>
+                <option value="Italie">italie</option>
+                <option value="Belgique" selected>Belgique</option>
+                <option value="Angleterre">Angleterre</option>
+                <option value="Russie">Russie</option>
+            </select>
+
+            <br>
+
+            <input type="text" name="numsecu" placeholder="Numéro de sécurité Social" minlength="0" maxlength="13" title="ce numéro doit etre composer de 13 chiffres">
+
+            <br>
+
+            <input type="text" name="passport" id="passport" placeholder="Numéro de Passeport" minlength="0" maxlength="9" title="9 chiffres max">
+
+            <br>
+
+            <label for="date_deliv_pass">Date de délivrance du passeport</label>
+            <br>
+                <input type="date" id="date_deliv_pass">
+
+                <br>
+
+            <label for="date_valid_pass">Date de validité du passeport</label>
+            <br>
+                <input type="date" id="date_valid_pass">
+
+                <br>
+
+            <input type="submit" value="Validé">
+
+        </FIeldset>
+
+        </form>
+
+    </main>
 
 </body>
 </html>
